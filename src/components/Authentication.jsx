@@ -5,7 +5,7 @@ import React from "react"
 export const Authentication = (props) => {
     const [selectedTab, setSelectedTab] = React.useState(0);
     return (
-        <div className="container">
+        <section className="authentication">
             <div className="tabContainer">
                 <div className="tabs">
                     <div className={(selectedTab === 0) ? "tab tabActive" : "tab"} id="loginTab" onClick={(e)=> setSelectedTab(0)}>Log In</div>
@@ -15,6 +15,6 @@ export const Authentication = (props) => {
                     {selectedTab === 0 ? <Login /> : <Signup />}
                 </div>
             </div>
-        </div>
+        </section>
     )
 };

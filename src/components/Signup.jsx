@@ -27,7 +27,7 @@ export const Signup = (props) => {
                     localStorage.setItem("auth", JSON.stringify(data))
                 }
                 sessionStorage.setItem("ME", JSON.stringify(admin));
-                navigate('/');
+                navigate('/', { replace: true });
             }).catch((e) => alert(e.message));
         } else {
             alert("Passwords mismatch!");
@@ -42,7 +42,7 @@ export const Signup = (props) => {
             <input className="textBox" type="password" placeholder="Confirm Password" required value={pass2} onChange={(e)=> setPass2(e.target.value)}/>
             <input id="keepLoggedIn" type="checkbox" checked={checked} onChange={(e)=> setChecked(!checked)} />
             <label htmlFor="keepLoggedIn">Keep me logged in</label>
-            <button type="submit">Sign Up</button>
+            <button type="submit" className="authenticateBtn positiveBtn">Sign Up</button>
         </form>
     )
 }

@@ -1,9 +1,13 @@
 import React from "react"
+import { Outlet } from 'react-router-dom';
+import { Header } from "./Header";
+import { HomeMenu } from "./HomeMenu";
 
 export const Home = (props) => {
     return (
-        <>
-            <h1>Home</h1>
-        </>
+        <section className="withHeader" id="home">
+            <Header menu={<HomeMenu />} />
+            <Outlet />
+        </section>
     )
 };

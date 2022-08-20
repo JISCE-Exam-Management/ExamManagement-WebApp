@@ -24,7 +24,7 @@ export const Login = (props) => {
                 localStorage.setItem("auth", JSON.stringify(data))
             }
             sessionStorage.setItem("ME", JSON.stringify(admin));
-            navigate('/');
+            navigate('/', { replace: true });
         }).catch((e) => alert(e.message));
     }
     return (
@@ -33,7 +33,7 @@ export const Login = (props) => {
             <input className="textBox" type="password" name="password" placeholder="Enter Password" required value={data.password} onChange={(e) => setData({ ...data, [e.target.name]: e.target.value })} />
             <input id="keepLoggedIn" type="checkbox" checked={checked} onChange={(e) => setChecked(!checked)} />
             <label htmlFor="keepLoggedIn">Keep me logged in</label>
-            <button type="submit">Log In</button>
+            <button type="submit" className="authenticateBtn positiveBtn">Log In</button>
         </form>
     )
 }

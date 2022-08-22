@@ -23,7 +23,7 @@ export const UsersSubHeader = ({onChangeSearch, onChangeFilter}) => {
 	return (
 		<header className='subHeader' id='usersSubHeader'>
 			<input type="text" name="search" className='search' value={search} onChange={(e)=> setSearch(e.target.value)} placeholder='Search users by name...' autoComplete='off' />
-			<div className="filterDropdown">
+			<div className="filterDropdown  right-m0">
 				<div className={colapse ? "filterSelected" : "filterSelected expand"} onClick={() => setColapse(!colapse)}>
 					<span className="selectedFilter">{filterOptions.find((o)=> o.value === value).label}</span>
 					<span className='divider'></span>
@@ -33,8 +33,6 @@ export const UsersSubHeader = ({onChangeSearch, onChangeFilter}) => {
 					{filterOptions.map((o)=> <li key={o.value} onClick={() => { setValue(o.value); setColapse(true) }}>{o.label}</li>)}
 				</ul>
 			</div>
-
-			<SiMicrosoftexcel className='menuIcon' />
 		</header>
 	)
 }

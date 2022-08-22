@@ -12,10 +12,10 @@ export const Signup = (props) => {
 	const [data, setData] = React.useState(initState);
 	const [checked, setChecked] = React.useState(true);
 	const [pass2, setPass2] = React.useState("");
-    const signup = async (e) => {
+    const signup = (e) => {
 		e.preventDefault();
         if (data.password === pass2) {
-            await fetch(API.ADMIN_SIGNUP, {
+            fetch(API.ADMIN_SIGNUP, {
                 method: "POST",
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data)

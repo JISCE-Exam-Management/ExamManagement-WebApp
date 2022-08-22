@@ -2,10 +2,14 @@ const BASE_URL = "https://exammanagement-server.herokuapp.com";
 // const BASE_URL = "http://localhost:8000";
 
 const API = {
-
+    ALL_ADMINS: BASE_URL.concat("/admin/all"),
+    ADMIN_BY_ID: BASE_URL.concat("/admin"),
     ADMIN_SIGNUP: BASE_URL.concat("/admin/signup"),
     ADMIN_LOGIN: BASE_URL.concat("/admin/login"),
-    
+    UPDATE_ADMIN: BASE_URL.concat("/admin/update"),
+    DELETE_ADMIN: BASE_URL.concat("/admin/delete"),
+
+
     ALL_DEGREES: BASE_URL.concat("/degrees/all"),
     DEGREE_BY_ID: BASE_URL.concat("/degrees"),
     ADD_DEGREE: BASE_URL.concat("/degrees/add/degree"),

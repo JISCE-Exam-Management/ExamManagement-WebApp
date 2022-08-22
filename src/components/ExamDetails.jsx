@@ -22,7 +22,7 @@ export const ExamDetails = () => {
         }).catch((e) => alert(e.message));
     }, [id]);
 
-    React.useEffect(()=> {
+    React.useEffect(() => {
         setChild(0);
     }, [exam]);
 
@@ -34,21 +34,19 @@ export const ExamDetails = () => {
         }
     }
 
-    return (
-        <section className='llh'>
+    return (<section className='llh'>
             <div className="sidebar llv">
                 {exam ? <ExamItem exam={exam}/> : ""}
                 <hr/>
-                {exam && child === 0 && currentTime < exam.examStartingTime ?
-                    <div className='sidebarButtons' onClick={(e) => setChild(1)}>Add New Hall</div>
-                    :
-                    <div className='sidebarButtons' onClick={(e) => setChild(0)}>Discard New Hall</div>}
+                {(exam && currentTime < exam.examStartingTime) ? (child === 0) ?
+                    <div className='sidebarButtons' onClick={(e) => setChild(1)}>Add New Hall</div> :
+                    <div className='sidebarButtons' onClick={(e) => setChild(0)}>Discard New Hall</div> : ""}
                 {exam && currentTime > exam.examEndingTime ?
                     <div className='sidebarButtons' onClick={exportAttendance}>Download Attendance</div> : ""}
             </div>
             <div className="main llh">
-                {child === 0 ? <ExamDetailsAllHalls exam={exam}/> : <ExamDetailsAddHall exam={exam} onHallAdded={(exam)=> setExam(exam)}/>}
+                {child === 0 ? <ExamDetailsAllHalls exam={exam}/> :
+                    <ExamDetailsAddHall exam={exam} onHallAdded={(exam) => setExam(exam)}/>}
             </div>
-        </section>
-    );
+        </section>);
 };

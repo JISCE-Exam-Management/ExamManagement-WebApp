@@ -321,11 +321,11 @@ svg {
     transform: translate(50%, 0);
 }
 
-.profileOptions::before, .profileOptions::after{
+.profileOptions::before, .profileOptions::after {
     right: 28px;
 }
 
-.filterOptions::before, .filterOptions::after{
+.filterOptions::before, .filterOptions::after {
     right: 19px;
 }
 
@@ -402,6 +402,10 @@ svg {
     position: relative;
     z-index: 25;
     margin-right: 1rem;
+}
+
+.filterDropdown.right-m0 {
+    margin-right: 0;
 }
 
 .filterSelected {
@@ -546,7 +550,7 @@ svg {
     margin-right: 1rem;
 }
 
- span.background {
+span.background {
     position: fixed;
     top: 0;
     left: 0;
@@ -675,7 +679,7 @@ section.child.withHeader {
     z-index: 5;
 }
 
-.sidebar .item{
+.sidebar .item {
     width: calc(100% - 1rem);
 }
 
@@ -853,7 +857,7 @@ section.child.withHeader {
 }
 
 .uploadFile input::-webkit-file-upload-button {
-    display:none;
+    display: none;
 }
 
 .uploadFile svg {
@@ -882,6 +886,23 @@ section.child.withHeader {
 .hallDetails .positiveBtn {
     margin: auto 0;
     align-self: flex-end;
+}
+
+.count {
+    line-height: 36px;
+}
+
+.authentication button {
+    margin: 20px 0 0;
+}
+
+.count {
+    line-height: 36px;
+    flex: 1 1 auto;
+}
+
+#attendanceSubmitButton {
+    margin: 0;
 }
 
 

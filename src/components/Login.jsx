@@ -10,9 +10,9 @@ export const Login = (props) => {
     };
     const [data, setData] = React.useState(initState);
     const [checked, setChecked] = React.useState(true);
-    const login = async (e) => {
+    const login = (e) => {
         e.preventDefault();
-        await fetch(API.ADMIN_LOGIN, {
+        fetch(API.ADMIN_LOGIN, {
             method: "POST",
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data)

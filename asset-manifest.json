@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/ExamManagement-WebApp/static/css/main.ca227a93.css",
+    "main.js": "/ExamManagement-WebApp/static/js/main.8bf70d98.js",
+    "static/js/787.adf40d9f.chunk.js": "/ExamManagement-WebApp/static/js/787.adf40d9f.chunk.js",
+    "index.html": "/ExamManagement-WebApp/index.html",
+    "main.ca227a93.css.map": "/ExamManagement-WebApp/static/css/main.ca227a93.css.map",
+    "main.8bf70d98.js.map": "/ExamManagement-WebApp/static/js/main.8bf70d98.js.map",
+    "787.adf40d9f.chunk.js.map": "/ExamManagement-WebApp/static/js/787.adf40d9f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ca227a93.css",
+    "static/js/main.8bf70d98.js"
+  ]
+}

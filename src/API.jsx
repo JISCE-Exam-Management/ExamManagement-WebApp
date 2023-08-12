@@ -1,4 +1,4 @@
-const BASE_URL = "https://exammanagement-server.herokuapp.com";
+const BASE_URL = "https://exammanagement-server.cyclic.app";
 // const BASE_URL = "http://localhost:8000";
 
 const API = {
